@@ -14,6 +14,9 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+export KAFKA_OPTS="-Dzookeeper.sasl.client=true -Dzookeeper.sasl.client.username=kafka -Dzookeeper.sasl.clientconfig=ZkClient -Djava.security.auth.login.config=/opt/kafka_2.12-3.5.1/config/jaas.conf"
+
+
 if [ $# -lt 1 ];
 then
 	echo "USAGE: $0 [-daemon] server.properties [--override property=value]*"
